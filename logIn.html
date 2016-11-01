@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+   	<title> Best Eats </title>
+   	<meta name="author" content="Birunthaa Umamahesan">
+	<link href="style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="myscripts.js"> </script>
+</head>
+<body>
+	<div id="header">
+		<h1> BEST EATS </h1>
+	</div>	
+    <div id="menu">
+		<a href="search.html">Home</a><a href="submission.html">Write a review</a><a href="registration.html">Sign Up</a><a class="active" href="logIn.html">Log In</a>	
+	</div>
+	<!--wrapper div contains all the elements apart from the footer-->
+    <div id="content">
+      <div id="wrapper">
+         	<div class="topBox">
+            <h2 class="content-title"> Log into Best Eats</h2>
+            <h4> New to Best Eats?</h4>
+            <a href="registration.html">
+              <h4 id ="regNew"> Register a new account today! </h4>
+            </a>	
+          </div>
+          <!--the bottom box contains all the sideboxes for user input-->		
+          <div class="bottomBox">
+          <!--the side box contains all the textbox for user input-->
+          <form name="loginForm" onsubmit="return validateLogin(this);">
+            <div class="sidebox">
+              <span> 
+                <input type="text" name="username" placeholder="Username">
+                <p id="userNameMissing"></p>
+              </span>
+				    </div>
+				    <div class="sidebox">
+              <span>
+					     <input type="text" name="password" placeholder="Password">
+                <p id="passwordMissing"></p>
+               </span> 
+				    </div>
+				    <div class="sidebox">
+              <input type ="submit" value="Submit">
+            </div>
+          </form>
+          </div>
+      </div>
+    </div>
+   	<div id="footer"></div>   	
+</body>
+</html>

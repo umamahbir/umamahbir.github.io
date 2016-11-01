@@ -1,0 +1,99 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<title> Best Eats </title>
+   <meta name="author" content="Birunthaa Umamahesan">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="style_resultPg.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+   <script type="text/javascript" src="myscripts.js"> </script>
+</head>
+<body onload="loadMap()">
+	<div id="header">
+		<h1> BEST EATS </h1>
+	</div>	
+    <div id="menu">
+		<a class="active" href="search.html">Home</a><a href="submission.html">Write a review</a><a href="registration.html">Sign Up</a><a href="logIn.html">Log In</a>
+	</div>
+	<!--wrapper div contains all the elements apart from the footer-->
+	<div id="wrapper1">
+		<!--visuals div contains the map and imageGallery -->
+		<div id="visuals">
+			<div id="subheader"> 
+				<h1>Patria</h1> 
+				<h3>120 King St. West, Toronto, Ont.</h3>
+				<h3>Phone:647-889-1010</h3>
+				<img src="images/5star.png" alt="imgRating">
+			</div>	
+			<!--storeManBox is a container for the map image-->
+			<div id="storeMapBox">	
+   			</div>
+   			<!--the imageGallery contains all row of images for one particular resutruant-->
+   			<div class="imageGallery">
+   				<!--the img box contains the image-->
+   				<div class="img">
+   					<img src="images/food1.jpg" alt="foodImg">
+   				</div>	
+   				<div class="img">
+   					<img src="images/food2.jpg" alt="foodImg">
+   				</div>
+   				<div class="img">
+   					<img src="images/food3.jpg" alt="foodImg">
+   				</div>
+   				<div class="img">
+   					<img src="images/food4.jpg" alt="foodImg">
+   				</div>
+   				<div class="img">
+   					<img src="images/food5.jpg" alt="foodImg">
+   				</div>
+   			</div>
+   		</div>
+   		<!--the review box contains all the user reviews-->	
+   		<div id="reviews">
+   			<h2>User Reviews </h2>
+   			<!--the userReivew box contains one users review 
+   		         with an display picture img, a write up and a rating img -->
+   			<div class="userReviewBox">
+   				<img class="dpImg" alt="dp" src="images/user.png">
+   				<div class="writeUp">
+   					<h3> Kris Ellis </h3>
+   					<img class="imgRating" alt="imgRating" src="images/4star.png"> 
+   					<p> Great food! Always good food and great service. </p>	
+   				</div>	
+   			</div>	
+   			<div class="userReviewBox">
+   				<img class="dpImg" alt="dp" src="images/user.png">
+   				<div class="writeUp">
+   					<h3> Bob Wills </h3>
+   					<img class="imgRating" alt="imgRating" src="images/5star.png"> 
+   					<p> No doubt this place is beautiful. Located in the heart of King West, Patria is both fun and sophisticated, and a great environment for group dinners or dates. Definitely upscale, but not so much that the environment is uptight and constricting. </p>	
+   				</div>	
+   			</div>
+   			<div class="userReviewBox">
+   				<img class="dpImg" alt="dp" src="images/user.png">
+   				<div class="writeUp">
+   					<h3> Joe Goodman </h3>
+   					<img class="imgRating" alt="imgRating" src="images/3star.png"> 
+   					<p> Overall I would say the dishes are overpriced with regard to its portion and taste.Great ambiance and decor, although personally I think the setting is too dim. </p>	
+   				</div>	
+   			</div>
+   			<div class="userReviewBox">
+   				<img class="dpImg" alt="dp" src="images/user.png">
+   				<div class="writeUp">
+   					<h3> Barbara D. </h3>
+   					<img class="imgRating" alt="imgRating" src="images/5star.png"> 
+   					<p> No doubt this place is beautiful. Located in the heart of King West, Patria is both fun and sophisticated, and a great environment for group dinners or dates. Definitely upscale, but not so much that the environment is uptight and constricting. </p>	
+   				</div>	
+   			</div>
+   		</div>
+   	</div>	
+   	<div id="footer">
+   		<img src="images/socialapps.png" alt="socialMedia" style="width:150px;height:15px;">
+  	</div>
+
+
+</body>
+
+</html>

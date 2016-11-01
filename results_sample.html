@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title> Best Eats </title>
+   <meta name="author" content="Birunthaa Umamahesan">
+   <link href="style.css" rel="stylesheet" type="text/css">
+   <link href="style_resultPg.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+   <script type="text/javascript" src="myscripts.js"> </script>
+</head>
+<body onload="loadMapResults()">
+   <div id="header">
+      <h1> BEST EATS </h1>
+   </div>   
+    <div id="menu">
+      <a class="active" href="search.html">Home</a><a href="submission.html">Write a review</a><a href="registration.html">Sign Up</a><a href="logIn.html">Log In</a>
+   </div> 
+   <!--wrapper div contains all the elements apart from the footer--> 
+   <div id="wrapper1">
+      <h2> Results: </h2>
+      <div id="mapBox"> </div>
+
+      <!--the responsive container holds all the imageResults -->
+      <div class="responsive">
+         <!--the imageResults container holds an image of the place,
+         the rating image, and a description text -->
+         <div class="imgResults">
+            <a href="individual_sample.html">
+               <img id="place" alt="IQfood" src="images/IQ.png"> 
+               <img class="imgRating" alt="imgRating" src="images/2star.png"> 
+               <div class="desc">IQ Food</div>
+            </a>
+         </div>
+         <div class="imgResults">
+            <a href="individual_sample.html">
+               <img src="images/La_Cart.png" alt="laCart">
+               <img class="imgRating" alt="imgRating" src="images/5star.png"> 
+               <div class="desc">La Cart</div>
+            </a>
+         </div>
+         <div class="imgResults">
+            <a href="individual_sample.html">
+               <img src="images/Patria.png" alt="Patria">
+               <img class="imgRating" alt="imgRating" src="images/3star.png"> 
+               <div class="desc">Patria</div>
+            </a>
+         </div>
+         <div class="imgResults">
+            <a href="individual_sample.html">
+               <img src="images/IQ.png" alt="IQfood">
+               <img class="imgRating" alt="imgRating" src="images/4star.png"> 
+               <div class="desc">IQ Food</div>
+            </a>
+         </div>
+      </div>
+   </div>   
+   <div id="footer">
+   </div>
+</body>
+
+</html>

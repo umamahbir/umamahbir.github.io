@@ -1,0 +1,218 @@
+/*-------------- CSS for the results_sample page 
+ */
+
+
+/* imgResults is used by the search-results page, for the image results place holder box
+ * create a box shadow, and size the boxes  
+ */
+div.imgResults{	
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 	text-align: center;
+ 	padding: 4px;
+ 	float: left;
+ 	margin: 10px;
+ 	width: 40%;
+ 	height: 35%;
+}
+/* imgResults img and mapBox img is made reponsive by 
+ * maintiaing 100% width when height changes
+ */
+div.imgResults img{
+    width: 100%;
+    height: auto;
+}
+/* desc has a place holder for the description 
+ * this will be under then imgResults img
+ */
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+
+/* imgResults changes the border colour when hovered over
+*/
+div.imgResults:hover{
+    border: 1px solid #555;
+}
+/* all the boxes are maintained consistenncy by using border-box for bos-sizing
+*/
+*{
+    box-sizing: border-box;
+}
+/* mapBox is place holder box for the mapimg
+ *its to be on the left side of the page.  
+ */
+#mapBox{
+	width: 55%;
+	float: left;
+	padding: 10px;
+	border-right: solid #330033;
+  background-size: 100% 100%;
+  height: 500px;
+
+}
+/* responsive is a container for all the boxes for the imageResults   
+ */
+.responsive {
+	padding: 10px 10px;
+  width: 45%;
+  overflow: scroll;
+}
+
+/* make the results_page responsive using the media query to change 
+ * the layout when the page size is less than 900px
+ *  make te wrapper, .responsive, .mapbox, .imgResults 100% wide and float accordingly
+ */
+@media only screen and (max-width: 900px){
+    #wrapper1{
+		width: 90%;
+		
+	}
+    .responsive {
+        width: 100%;
+        float: none;
+        height: auto;
+        border-left: none;
+    }
+    #mapBox {
+        width: 90%;
+        float: none;
+        padding: 15px;
+        border-bottom: solid #330033;
+        border-right: none;
+        margin-left: 2%;
+  
+    }
+    .imgResults{	
+ 		width: 40%;
+ 		height: auto;
+ 		margin-left: 25px;
+ 		float: left;
+	}
+
+}
+/*--------------CSS for individual_sample.html
+ */
+
+/* the div visuals is 100% wide and used for containing the map and imgGallery at the top
+ */
+#visuals{
+	display: inline-block;
+	width: 100%;
+}
+/* the div reviews is 100% wide and used for containing all the reviews
+ */
+#reviews{
+	display: table;
+	width: 100%;
+	border-bottom:solid;
+	border-top:solid; 
+	border-width: 5px;
+	padding: 10px;
+}
+/* the subheaders is to describe the indivual location selected at the top of the page
+ */
+#subheader h1, #subheader h3{
+	text-align: left;
+    color: #1a001a;
+    text-align: left;
+    margin: 0px;
+   	margin-top: 5px;
+}
+
+/* the imgRating is a container for the rating star images
+ */
+img.imgRating{
+  width: 100px;
+ 	height: 25px;
+ 	margin: 0px;
+}
+
+#storeMapBox{
+ 	width: 35%;
+ 	height: 300px;
+ 	float: left;
+ }
+/* imgGallery is a place holder for all the images 
+ */
+ .imageGallery{
+ 	width: 65%;
+ 	height: 200px;
+ 	float: left;
+ 	overflow-x: scroll;
+ 	overflow-y: hidden;
+ 	white-space:nowrap;
+ 	margin-top: 50px;
+
+ }
+ #storeMapBox img{
+ 	width: 100%;
+    height: auto;
+ }
+ /* all the images in the imgGallery are to have a box-shawdow and sized evenly
+ */
+ .img img{
+ 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 	padding: 10px;
+ 	float: left;
+ 	margin: 2px;
+ 	width: 150px;
+ 	height: 190px;
+ 	display: inline-block;
+ }
+ /* make page responsive by removing the imageGallery if screensize is less than 600px
+ *  and make the map 100% width for the top screen pos
+ */
+ @media only screen and (max-width: 600px){
+    #storeMapBox{
+ 		width: 100%;
+	}
+	.imageGallery{
+		display: none;
+	}
+
+}
+/* userReview box is a placeholder box for all the user reviews and its to be on the bottom of the pg 
+ */
+ .userReviewBox{
+ 	  max-width: 100%;
+  	margin-bottom: 10px;
+  	margin-top: 5px;
+  	background: transparent;
+  	padding-bottom: 15px;
+  	border-top: 2px solid;
+  	border-bottom: 2px solid;
+ }
+
+ #reviews h2, .writeUp h3{
+    color: #1a001a;
+    text-align: left;
+    font-weight: lighter;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin: 0px;
+ }
+ #reviews h2{
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
+ 	font-size: 25px;
+ }
+/* change the display pic box size for the images 
+ */
+.dpImg{
+ 	max-width: 100px;
+ 	max-height: 100px;
+  margin-right: 5px;
+
+}
+ .writeUp {
+  display: inline-block;
+  width: 60%; 
+  margin-top: 0px;
+}
+
+.userReviewBox p{
+  	color: #1a001a; 
+  	margin:0px;
+  	width: 100%; 
+
+}

@@ -1,0 +1,324 @@
+/*-------------- CSS for all pages to maintain standard layout 
+ */
+
+
+/* centre the header element and change the font size and text colour
+*/
+#header { 
+    text-align: center;
+    background-color:#000033; 
+    padding: 20px;
+}
+/* space the header within the header element and add padding 
+*/
+#header h1{
+    margin: 0px;
+    padding: 15px;
+    font-size: 60px;
+    font-weight: lighter;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 15px;  
+}
+/* the menu element is below the header element 
+ * and is a bar that contains the menu options
+ * the colour of the menu bar is dark purple
+ */
+#menu{
+    list-style-type: none;
+    overflow: hidden;
+    background-color:#000033;    
+}
+/* the menu element contains "a" elements 
+ * the elements float to the left of the page and has white text  
+ */
+#menu a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    float: left;
+ 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+ 	font-size: 16px;
+}
+/* shows which cell is currently active on the menu by changing the colour to light purple
+*/
+a.active{
+	background-color: #00001a;
+}
+
+/* when mouse hovers over menu items the background colour
+* changes to a darker purple colour 
+*/
+#menu a:hover {
+    background-color: #00001a;
+}
+/* change menu display when screen with is 600px or less
+ * menu items will appear vertically 
+ */
+@media screen and (max-width: 600px){
+    #menu a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/*-------------- CSS for search.html
+ */
+
+/* sidebar is a element that contains other side boxes
+ * the entire side bar will float to the right 
+*/
+
+#content{
+   background: url("images/bgImg.jpg") no-repeat;
+   background-size: 100% 100%;
+   clear: both;
+   overflow: hidden;
+
+}
+/* Th wrapper is used by results page and individual sample page
+ * it holds all the contents on the page, and centers the elements
+ */
+#wrapper{
+    background-color: #f2f2f2;
+    width: 55%;
+    margin-left: 25%;
+    margin-right: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    opacity: 0.9;
+    clear: both;
+    overflow: hidden;
+    border: solid;
+    position: relative;
+} 
+#wrapper1{
+   width: 80%;
+   margin-left: 10%;
+   margin-right: 10%; 
+   margin-top: 2%;
+   margin-bottom: 2%;
+   height: auto;
+}
+
+/* make the map image responsive by changing the position of the mapBox and sidebbar 
+*if the page is less than 1000px 
+*/ 
+@media screen and (max-width: 1000px){
+    #sidebar{
+        float: none;
+        width: 90%;
+     }
+} 
+
+
+/* sidebox is a element within the sidebar that contains the input elements
+ *the sidebox will be displayed inline to the other boxes
+ */
+div.sidebox{
+    width: 100%;
+    display: inline-table;
+    margin: 10px;
+
+}
+
+/*This is used for the search, login, register, and submit pages 
+ *create a textbox for user input and dropdown 
+ * width of the input items should be 90% of the sidebar
+ * with a light grey border  
+ */
+select,.bottomBox input[type=text], .bottomBox input[type=email]{
+    width: 70%;
+    border: 3px solid #ccc;
+    margin: 10px 0;
+    transition: 0.5s; 
+    outline: none;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;  
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: auto;
+    padding: 5px 5px 5px 30px;
+
+}
+
+/* add a search icon inside search form boxes
+ * position the icon to fit inside to box
+ */
+#foodType, #location{
+    background-image: url("images/search.png");
+    background-position: 10px 5px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+/* This is used for the search, login, register, and submit pages 
+ * change the textbox border colour and width when it is clicked 
+ */ 
+
+select:hover, .bottomBox input[type=text]:hover, .bottomBox input[type=email]:hover{
+    border: 3px solid #1a001a;
+}
+
+/* This is used for the search, login, register, and submit pages 
+ * the label is for the input types describing its function
+ *change the default font stile, and display position
+ */
+label {
+  display: inline-block;
+  width: auto;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#locationSearchText{
+    width: 30%;
+    margin-right: 10px;
+}
+#locationSearchButtong{
+    width: 10%;
+    margin-left: 10px;
+
+}
+
+/* create a submit button that is 60% of the sidebox element
+ * with background colour dark purple and text colour white
+ * and a cursor will appear as a pointer to show it can be clicked
+ */
+.submitButton, input[type=submit]{
+    width: 60%;
+    background-color: #00001a;
+    color: white;
+    padding: 10px 0px;
+    border: none;
+    cursor: pointer;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px; 
+    transition: 0.5s; 
+    margin-left: 10%;
+    margin-right: 15%;
+
+}
+
+/* when mouse hovers over submit button the background colour
+* changes to a a lighter purple colour 
+*/
+.submitButton:hover, input[type=submit]:hover{
+    background-color:#000033;
+    color: white;
+}
+
+/* add a bar to flow across the bottom of the page*/
+#footer {
+    clear: both;
+    overflow: hidden;
+    background-color:#000033;  
+    height: 20px;
+    margin-top: 0px;
+}
+
+
+/*-------------- CSS for login, register, and submit html pages  
+ */
+
+
+/* The topBox and bottomBox is used by the login, register, and submit pages 
+ * it holds the input text and description and centers the information
+ */
+.topBox, .bottomBox{
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+/* The topbox heading is formatted to be consistent with the font used for the entire website
+*/
+.topBox h2, .topBox h4{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin-bottom: 0px;
+	margin-top: 15px;
+}
+
+/*the radio buttons used in the register page
+* display them inline
+*/
+.bottomBox input[type=radio]{
+	display: inline;
+}
+/*make labels on the submission form float left
+*/
+.subFormLabel{
+    float: left;
+    position: relative;
+} 
+
+/*add validation for the lat and long boxes 
+*/
+
+#lat, #long {
+    width: 30%; 
+    pattern:"[0-9]";
+    aria-required:"true";
+    aria-describedby:"name-format";
+    maxlength:15;
+    minlength:2;
+
+}
+#lat{
+    margin-left: 5%;
+    margin-right: 2%;
+}
+#long{
+    margin-right: 5%;
+    margin-left: 2%;
+    title: "Longitude";
+    pattern: "((1?[0-7]?|[0-9]?)[0-9]|180)\.[0-9]{1,6}";
+}
+
+/* rating dropdown list
+ * adjust width of box
+ */
+#rating{
+    width: 60%;
+}
+/* login page validation 
+ * message in red if not entered correctly
+ */
+
+#userNameMissing, #passwordMissing, #emailField, #firstNField, #lastNField, #passwordField{
+    color: red;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 12px;
+    display: inline;
+    padding: 2px;
+    text-align: left;
+  
+}
+
+
+
+/* submission page validation using HTML and CSS 
+ * message in red if not entered correctly
+ */
+   input[type=text].validation:valid {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+  }
+   
+  input[type=text].validation:invalid {
+    border: 1px solid red;
+  }
+  input[type=text].validation:invalid + .requirement{
+    color: red;
+    overflow: hidden;
+    font-style: italic;
+    visibility: visible;
+    margin: 0px;
+  } 
+  
+  .requirement{
+      visibility: hidden;
+    } 
+
